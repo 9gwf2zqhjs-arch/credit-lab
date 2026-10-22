@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>말 걸면 자라는 정원</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="garden"></canvas>
+<div id="status"></div>
+<div id="tip" hidden></div>
+<form id="say" autocomplete="off">
+  <input id="text" type="text" placeholder="아무 말이나 건네 보세요" maxlength="200" aria-label="심을 문장">
+  <span id="count"></span>
+  <button type="submit">심기</button>
+</form>
+<div id="toast" hidden></div>
+<script src="plant.js"></script>
+<script src="garden.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #f3e9dc; }
+body { font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; color: #2f2a24; }
+canvas { display: block; width: 100vw; height: 100vh; }
+
+#status {
+  position: fixed; top: 12px; left: 16px; font-size: 12px; letter-spacing: .02em;
+  color: #6b5f52; background: rgba(255, 255, 255, .55); padding: 4px 10px; border-radius: 999px;
+}
+
+#say {
+  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+  width: min(560px, calc(100vw - 32px)); display: flex; gap: 8px; align-items: center;
+  background: rgba(255, 252, 246, .92); border-radius: 999px; padding: 6px 6px 6px 18px;
+  box-shadow: 0 4px 18px rgba(60, 40, 20, .18);
+}
+#text { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: 16px; outline: none; color: inherit; }
+#count { font-size: 11px; color: #9a8c7c; font-variant-numeric: tabular-nums; }
+#say button {
+  border: 0; border-radius: 999px; padding: 9px 18px; font: inherit; font-weight: 600;
+  background: #4f7a3a; color: #fff; cursor: pointer;
+}
+#say button:disabled { background: #a9b59f; cursor: default; }
+
+#tip {
+  position: fixed; pointer-events: none; max-width: 260px; padding: 10px 12px; border-radius: 10px;
+  background: rgba(40, 34, 28, .9); color: #fbf6ee; font-size: 13px; line-height: 1.45;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
+}
+#tip b { font-size: 15px; display: block; margin-bottom: 2px; }
+#tip q { display: block; margin: 6px 0; color: #e8dcc8; }
+#tip q::before { content: "“"; } #tip q::after { content: "”"; }
+#tip small { color: #b9ab98; }
+
+#toast {
+  position: fixed; left: 50%; bottom: 84px; transform: translateX(-50%);
+  background: #7a3b2e; color: #fff; padding: 8px 14px; border-radius: 8px; font-size: 13px;
+}
